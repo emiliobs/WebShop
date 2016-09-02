@@ -168,8 +168,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FooController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\WineriesController.cs" />
+    <Compile Include="Controllers\WinesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -276,6 +279,18 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\__IndexPartial.cshtml" />
+    <Content Include="Views\Home\Foo.cshtml" />
+    <Content Include="Views\Foo\Bar.cshtml" />
+    <Content Include="Views\Wineries\Index.cshtml" />
+    <Content Include="Views\Wineries\Create.cshtml" />
+    <Content Include="Views\Wines\Create.cshtml" />
+    <Content Include="Views\Wines\Delete.cshtml" />
+    <Content Include="Views\Wines\Details.cshtml" />
+    <Content Include="Views\Wines\Edit.cshtml" />
+    <Content Include="Views\Wines\Index.cshtml" />
+    <Content Include="Views\Wineries\Edit.cshtml" />
+    <Content Include="Views\Wineries\Details.cshtml" />
+    <Content Include="Views\Wineries\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

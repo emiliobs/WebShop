@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebShop.Models.Wine>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Wine</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new {},new {@class="btn btn-success"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Winery.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearOfBottling)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AlcoholPercentage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WineType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Winery.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearOfBottling)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AlcoholPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImagePath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WineType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {id = item.WineId}, new {@class = "btn btn-info"})
+
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new {id = item.WineId}, new {@class = "btn btn-primary"})
+
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.WineId }, new { @class = "btn  btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

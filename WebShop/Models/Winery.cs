@@ -13,6 +13,7 @@ namespace WebShop.Models
 
         [Required]
         [StringLength(30, ErrorMessage = "The field {0} must be shorter than {1} characters.....")]
+        [Display(Name = "Winery Name")]
         public string Name { get; set; }
 
 

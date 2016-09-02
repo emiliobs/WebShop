@@ -13,15 +13,18 @@ namespace WebShop.Models
 
         [Required]
         [StringLength(25, ErrorMessage = "The field {0} must be shorter than {1} characters.....")]
+        [Display(Name = "Wine Name")]
         public string Name { get; set; }
 
         [Range(10, 200)]
         public double Price { get; set; }
 
         [Range(2000, 2999)]
+        [Display(Name = "Year Of Bottling")]
         public int YearOfBottling { get; set; }
 
         [Range(8.5, 22, ErrorMessage = "The field {0} must be between {1} and {2} %.....")]
+        [Display(Name = "Alcohol Percentage")]
         public double AlcoholPercentage { get; set; }
 
         public string ImagePath { get; set; }
@@ -29,6 +32,7 @@ namespace WebShop.Models
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
+        [Display(Name = "Wine Type")]
         public WineType WineType { get; set; }
 
         [Display(Name = "Winery")]
