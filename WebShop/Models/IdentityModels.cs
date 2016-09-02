@@ -23,7 +23,14 @@ namespace WebShop.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+
+
         }
+
+        public DbSet<Wine> Wines { get; set; }
+
+        public DbSet<Winery> Wineries { get; set; }
+
 
         public static ApplicationDbContext Create()
         {
